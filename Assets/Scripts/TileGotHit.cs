@@ -23,7 +23,7 @@ public class TileGotHit : MonoBehaviour
         {
             Destroy(this.gameObject); // Destroy Brick
             Destroy(collision.gameObject); // Destroy laser
-            if (TileParent.gameObject.transform.childCount == 1)
+            if (TileParent.gameObject.transform.childCount == 1 && isDestroyable)
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
