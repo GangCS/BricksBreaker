@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ExpandScript : MonoBehaviour
+public class ScalingScript : MonoBehaviour
 {
     [SerializeField] GameObject Cube;
     [SerializeField] float TimeOfPowerUp = 3f;
+    [SerializeField] float scalingMult = 1.3f;
     private bool touched = false;
     private Vector3 orginalScale;
     private GameObject theCube;
@@ -20,9 +21,10 @@ public class ExpandScript : MonoBehaviour
         
         if (collision.tag.CompareTo("Player") == 0)
         {
-            this.gameObject.transform.localScale *=0;
+            this.gameObject.transform.localScale *= 0;
             this.gameObject.transform.position = new Vector3(100,0,0);
-            collision.gameObject.transform.localScale = orginalScale * 1.3f;
+            Vector3 newScale = new Vector3(orginalScale.x * scalingMult, orginalScale.y, orginalScale.z);
+            collision.gameObject.transform.localScale = newScale;
             theCube = collision.gameObject;
             ExapndTime = Time.time;
             touched = true;

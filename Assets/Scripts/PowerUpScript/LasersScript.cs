@@ -2,35 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FasterScript : MonoBehaviour
+public class LasersScript : MonoBehaviour
 {
-    [SerializeField] GameObject Ball;
     [SerializeField] float TimeOfPowerUp = 3f;
-    Mover m;
     private bool touched = false;
-    private GameObject theBall;
-    private float SpeedTime;
-    private Rigidbody2D rb;
-    private bool TouchedOnce=false;
+    private static float SpeedTime;
+    LaserSpawner spawnerA;
+    LaserSpawner spawnerB;
+
     // Start is called before the first frame update
     void Start()
     {
-        theBall = GameObject.Find("Ball");
-        m = GameObject.Find("Cube").GetComponent<Mover>();
-        rb = theBall.GetComponent<Rigidbody2D>();
+        spawnerA = GameObject.Find("spawnerA").GetComponent<LaserSpawner>();
+        spawnerB = GameObject.Find("spawnerB").GetComponent<LaserSpawner>();
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if (collision.tag.CompareTo("Player") == 0 && !TouchedOnce)
+        if (collision.tag.CompareTo("Player") == 0)
         {
-            this.gameObject.transform.localScale *= 0;
-            rb.velocity *= 1.2f;
-            m.HigherSpeed(1.2f);
+            this.gameObject.transform.localScale *= 0; // disapper powerUp
+            spawnerA.setShotter(true);
+            spawnerB.setShotter(true);
             this.gameObject.transform.position = new Vector3(100, 0, 0);
             SpeedTime = Time.time;
             touched = true;
-            TouchedOnce = true;
         }
     }
     // Update is called once per frame
@@ -41,8 +38,8 @@ public class FasterScript : MonoBehaviour
             if (Time.time - SpeedTime >= TimeOfPowerUp)
             {
                 touched = false;
-                rb.velocity /= 1.2f;
-                m.slowerSpeed(1.2f);
+                spawnerA.setShotter(false);
+                spawnerB.setShotter(false);
                 Destroy(this.gameObject);
             }
 

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1162143317813544339}
   - component: {fileID: 1162143317813544336}
   - component: {fileID: 1162143317813544337}
+  - component: {fileID: -4717107932295470727}
   m_Layer: 0
   m_Name: SlowerBallPowerUp
   m_TagString: Untagged
@@ -120,3 +121,18 @@ CircleCollider2D:
   m_Offset: {x: -0.010449052, y: 0}
   serializedVersion: 2
   m_Radius: 0.4477545
+--- !u!114 &-4717107932295470727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162143317813544350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24ed657a44595a143aab2d7fe58521c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ball: {fileID: 5667560876739242551, guid: 3184ee7627e4fd542b2e40c20fd9e244, type: 3}
+  TimeOfPowerUp: 3
+  speedMult: 0.8

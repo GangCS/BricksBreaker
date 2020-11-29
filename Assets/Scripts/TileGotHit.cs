@@ -13,6 +13,14 @@ public class TileGotHit : MonoBehaviour
     {
         anim.SetFloat("Life", hitPoints);
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "laser")
+        {
+            Destroy(this.gameObject); // Destroy Brick
+            Destroy(collision.gameObject); // Destroy laser
+        }
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

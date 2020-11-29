@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 350760512482638157}
   - component: {fileID: 350760512482638156}
   - component: {fileID: 350760512482638159}
+  - component: {fileID: 667946382562537716}
   m_Layer: 0
   m_Name: LasersPowerUp
   m_TagString: Untagged
@@ -120,3 +121,17 @@ CircleCollider2D:
   m_Offset: {x: 0.0035514235, y: 0}
   serializedVersion: 2
   m_Radius: 0.43962568
+--- !u!114 &667946382562537716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 350760512482638158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6801133516f1e4e429b8c34489e3785d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laser: {fileID: 0}
+  TimeOfPowerUp: 3

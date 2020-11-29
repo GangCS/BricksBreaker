@@ -5,7 +5,7 @@ using UnityEngine;
 public class Mover : MonoBehaviour
 {
     float playerYposition;
-
+    [SerializeField] public static int ballCount = 1;
     [SerializeField] float newDirectionSize = 10;
     [SerializeField] float newDirectionPower = 20;
 

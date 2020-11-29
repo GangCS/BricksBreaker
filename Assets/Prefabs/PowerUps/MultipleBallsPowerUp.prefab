@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1893161038898565658}
   - component: {fileID: 1893161038898565659}
   - component: {fileID: 1893161038898565656}
+  - component: {fileID: -7200449921474938370}
   m_Layer: 0
   m_Name: MultipleBallsPowerUp
   m_TagString: Untagged
@@ -120,3 +121,15 @@ CircleCollider2D:
   m_Offset: {x: -0.000000029802322, y: 0}
   serializedVersion: 2
   m_Radius: 0.43730554
+--- !u!114 &-7200449921474938370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893161038898565657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b2533a3a8f16a748a6fae89e921ad85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

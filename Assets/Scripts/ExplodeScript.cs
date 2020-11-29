@@ -26,7 +26,7 @@ public class ExplodeScript : StateMachineBehaviour
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.gameObject.GetComponent<BoxCollider2D>().enabled = false;
-        int x = Random.Range(3, 5);
+        int x = Random.Range(0, 16);
         switch (x)
         {
             case 1: Instantiate(biggerBall, new Vector3(animator.gameObject.transform.position.x, animator.gameObject.transform.position.y), Quaternion.identity);
@@ -44,7 +44,7 @@ public class ExplodeScript : StateMachineBehaviour
                 Instantiate(LasersPowerUp, new Vector3(animator.gameObject.transform.position.x, animator.gameObject.transform.position.y), Quaternion.identity);
                 break;
             case 6:
-                Instantiate(MultipleBallsPowerUp, new Vector3(animator.gameObject.transform.position.x, animator.gameObject.transform.position.y), Quaternion.identity);
+                //Instantiate(MultipleBallsPowerUp, new Vector3(animator.gameObject.transform.position.x, animator.gameObject.transform.position.y), Quaternion.identity);
                 break;
             case 7:
                 Instantiate(ShrinkPowerUp, new Vector3(animator.gameObject.transform.position.x, animator.gameObject.transform.position.y), Quaternion.identity);

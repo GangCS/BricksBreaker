@@ -13,14 +13,19 @@ public class DestroyObjects : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag.CompareTo("ball") == 0)
-        {
-            SceneManager.LoadScene("Level1");
-        }
-        else
-        {
-            Destroy(collision.gameObject);
-        }
+        
+            if (collision.gameObject.tag.CompareTo("ball") == 0)
+            {
+                Destroy(collision.gameObject);
+                Mover.ballCount--;
+                //Debug.Log(Mover.ballCount);
+                if (Mover.ballCount <= 0)
+                    SceneManager.LoadScene("Level1");
+            }
+            else
+            {
+                Destroy(collision.gameObject);
+            }
     }
     // Update is called once per frame
     void Update()
