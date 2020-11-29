@@ -20,8 +20,8 @@ public class DestroyObjects : MonoBehaviour
                 Mover.ballCount--;
                 //Debug.Log(Mover.ballCount);
                 if (Mover.ballCount <= 0)
-                    SceneManager.LoadScene("Level1");
-            }
+                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
             else
             {
                 Destroy(collision.gameObject);

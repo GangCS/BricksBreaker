@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class DeathScript : MonoBehaviour
 {
-    [SerializeField] string SceneName;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +15,7 @@ public class DeathScript : MonoBehaviour
     {
         if(collision.gameObject.tag.CompareTo("Player") == 0)
         {
-            SceneManager.LoadScene(SceneName);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 

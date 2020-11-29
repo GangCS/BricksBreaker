@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TileGotHit : MonoBehaviour
 {
@@ -8,10 +9,13 @@ public class TileGotHit : MonoBehaviour
     [SerializeField] Animator anim;
     [SerializeField] bool isDestroyable;
     [SerializeField] Sprite brokenSprite;
+    GameObject TileParent;
+    
     // Start is called before the first frame update
     void Start()
     {
         anim.SetFloat("Life", hitPoints);
+        TileParent = this.transform.parent.gameObject;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -19,6 +23,10 @@ public class TileGotHit : MonoBehaviour
         {
             Destroy(this.gameObject); // Destroy Brick
             Destroy(collision.gameObject); // Destroy laser
+            if (TileParent.gameObject.transform.childCount == 1)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
         }
     }
 
@@ -31,6 +39,10 @@ public class TileGotHit : MonoBehaviour
             if (hitPoints==1)
             {
                 this.gameObject.GetComponent<SpriteRenderer>().sprite = brokenSprite;
+            }
+            if(TileParent.gameObject.transform.childCount==1)
+            {
+                  SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
             }
         }
     }
