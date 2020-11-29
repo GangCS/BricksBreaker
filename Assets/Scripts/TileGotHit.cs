@@ -32,17 +32,20 @@ public class TileGotHit : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (isDestroyable)
+        if (collision.gameObject.tag == "ball")
         {
-            hitPoints--;
-            anim.SetFloat("Life", hitPoints);
-            if (hitPoints==1)
+            if (isDestroyable)
             {
-                this.gameObject.GetComponent<SpriteRenderer>().sprite = brokenSprite;
-            }
-            if(TileParent.gameObject.transform.childCount==1)
-            {
-                  SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+                hitPoints--;
+                anim.SetFloat("Life", hitPoints);
+                if (hitPoints == 1)
+                {
+                    this.gameObject.GetComponent<SpriteRenderer>().sprite = brokenSprite;
+                }
+                if (TileParent.gameObject.transform.childCount == 1)
+                {
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                }
             }
         }
     }
