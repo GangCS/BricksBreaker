@@ -8,8 +8,6 @@ public class ballMover : MonoBehaviour
     [SerializeField] float ballYvelocity = 400f;
     [SerializeField] float ballXvelocity = 100f;
 
-    float lowerGround = -7;
-
     private Rigidbody2D rb;
 
     private void Start()
@@ -20,9 +18,6 @@ public class ballMover : MonoBehaviour
     }
     private void Update()
     {
-        if(this.transform.position.y < lowerGround)
-        {
-            SceneManager.LoadScene("Level1");
-        }
+      
     }
 }

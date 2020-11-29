@@ -14,7 +14,18 @@ public class Mover : MonoBehaviour
     {
         playerYposition = this.transform.position.y;
     }
-
+   public void HigherSpeed(float newMulti)
+    {
+        this.newDirectionPower = newDirectionPower * newMulti;
+    }
+    public float getSpeed()
+    {
+        return newDirectionPower;
+    }
+    public void slowerSpeed(float newMulti)
+    {
+        this.newDirectionPower = newDirectionPower / newMulti;
+    }
     // Update is called once per frame
     void Update()
     {

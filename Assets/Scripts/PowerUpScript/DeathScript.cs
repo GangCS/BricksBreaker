@@ -1,23 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class TileGotHit : MonoBehaviour
+public class DeathScript : MonoBehaviour
 {
-    [SerializeField] int hitPoints = 1;
-
+    [SerializeField] string SceneName;
     // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        hitPoints--;
-        if(this.hitPoints == 0)
+        if(collision.gameObject.tag.CompareTo("Player") == 0)
         {
-            Destroy(this.gameObject);
+            SceneManager.LoadScene(SceneName);
         }
     }
 
