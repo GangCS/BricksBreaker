@@ -38,6 +38,7 @@ https://github.com/GangCS/BricksBreaker/blob/main/Assets/Scripts/PowerUpScript/S
 <img src="https://github.com/GangCS/BricksBreaker/blob/main/forReadMe/explodeAnim.png" width="500" height="100"> <br />
 ### Animator Component
 <img src="https://github.com/GangCS/BricksBreaker/blob/main/forReadMe/anim.png" width="700"> <br />
+https://github.com/GangCS/BricksBreaker/blob/8476531f147c5e030e955471cc98a06334a31743/Assets/Scripts/TileGotHit.cs#L19-L27 <br /> 
 ## Technology:
 <img src="https://github.com/GangCS/BricksBreaker/blob/main/forReadMe/unity.jpg" width="250"> <img src="https://github.com/GangCS/BricksBreaker/blob/main/forReadMe/225px-C_Sharp_logo.png" width="100">
 
