@@ -1,7 +1,8 @@
 # BricksBreaker
 <img src="https://github.com/GangCS/BricksBreaker/blob/main/forReadMe/png-transparent-endless-brick-breaker-one-more-brick-bricks-breaker-puzzle-android-blasted-bricks-game-rectangle-video-game-removebg-preview.png" width="150"> <br />
 Created during <strong>Game Development</strong> course during the third year at <em>Ariel University</em> in the Department of Computer Science, 2020 <br /> 
-In this project we worked with <strong>Unity</strong> Physics engine.
+In this project we worked with <strong>Unity</strong> Physics engine. <br />
+You can play the game on: <a href="https://shaharnik.itch.io/brickbreaker">https://shaharnik.itch.io/brickbreaker</a> <br />
 <strong>Made by: </strong> <a href="https://github.com/ShaharNik">Shahar Niknazar</a>, <a href="https://github.com/YosefTwito">Yosef Twito</a>, <a href="https://github.com/VadimKachevski">Vadim Kachevski</a> and <a href="https://github.com/darsam44">Dar Sambrano.</a></p>
 ## Gallery
 ### Start Screen
