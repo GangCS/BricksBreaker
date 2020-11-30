@@ -4,6 +4,8 @@ Created during <strong>Game Development</strong> course during the third year at
 In this project we worked with <strong>Unity</strong> Physics engine.
 <strong>Made by: </strong> <a href="https://github.com/ShaharNik">Shahar Niknazar</a>, <a href="https://github.com/YosefTwito">Yosef Twito</a>, <a href="https://github.com/VadimKachevski">Vadim Kachevski</a> and <a href="https://github.com/darsam44">Dar Sambrano.</a></p>
 ## Gallery
+### Start Screen
+<img src="https://github.com/GangCS/BricksBreaker/blob/main/forReadMe/explanations.png" width="450"> <br />
 ### Level 1
 <img src="https://github.com/GangCS/BricksBreaker/blob/main/forReadMe/lvl1.png" width="450"> <br />
 ### Level 2
@@ -12,6 +14,10 @@ In this project we worked with <strong>Unity</strong> Physics engine.
 <img src="https://github.com/GangCS/BricksBreaker/blob/main/forReadMe/lvl3.png" width="450"> <br />
 ### Level 4
 <img src="https://github.com/GangCS/BricksBreaker/blob/main/forReadMe/lvl4.png" width="450"> <br />
+### Level 5
+<img src="https://github.com/GangCS/BricksBreaker/blob/main/forReadMe/lvl5.png" width="450"> <br />
+### WINNER !
+<img src="https://github.com/GangCS/BricksBreaker/blob/main/forReadMe/winScene.png" width="450"> <br />
 ## Features
 <img src="https://github.com/GangCS/BricksBreaker/blob/main/Assets/images/PowerUps/ball_big-expand.png" width="50"> Increase the size of the ball to a few seconds <br />
 https://github.com/GangCS/BricksBreaker/blob/main/Assets/Scripts/PowerUpScript/BigBallScript.cs#L20-L41 <br />
@@ -27,6 +33,10 @@ https://github.com/GangCS/BricksBreaker/blob/main/Assets/Scripts/PowerUpScript/S
 https://github.com/GangCS/BricksBreaker/blob/main/Assets/Scripts/PowerUpScript/ScalingScript.cs#L19-L48 <br />
 <img src="https://github.com/GangCS/BricksBreaker/blob/main/Assets/images/PowerUps/slide_shrink.png" width="50"> Reduce the player's platform to a few seconds <br />
 https://github.com/GangCS/BricksBreaker/blob/main/Assets/Scripts/PowerUpScript/ScalingScript.cs#L19-L48 <br />
+## Animation
+<img src="https://github.com/GangCS/BricksBreaker/blob/main/forReadMe/explodeAnim.png" width="500" height="100"> <br />
+### Animator Component
+<img src="https://github.com/GangCS/BricksBreaker/blob/main/forReadMe/anim.png" width="700"> <br />
 ## Technology:
 <img src="https://github.com/GangCS/BricksBreaker/blob/main/forReadMe/unity.jpg" width="250"> <img src="https://github.com/GangCS/BricksBreaker/blob/main/forReadMe/225px-C_Sharp_logo.png" width="100">
 
