@@ -8,7 +8,7 @@ public class Mover : MonoBehaviour
     float playerYposition;
    
     [SerializeField] float newDirectionSize = 10;
-    [SerializeField] float newDirectionPower = 20;
+    [SerializeField] float newDirectionPower = 12;
     [SerializeField] GameObject leftWall;
     [SerializeField] GameObject rightWall;
     public static int ballCount = 1;
