@@ -148,6 +148,7 @@ MonoBehaviour:
   anim: {fileID: 9119052139377566260}
   isDestroyable: 0
   brokenSprite: {fileID: 21300000, guid: 7101da25bcabf3341a3bb0bd531a3146, type: 3}
+  NumberOfTile: 6
 --- !u!95 &9119052139377566260
 Animator:
   serializedVersion: 3

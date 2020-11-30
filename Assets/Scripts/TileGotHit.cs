@@ -5,16 +5,25 @@ using UnityEngine.SceneManagement;
 
 public class TileGotHit : MonoBehaviour
 {
-    [SerializeField] int hitPoints = 1;
+    [SerializeField] int hitPoints = 3;
     [SerializeField] Animator anim;
     [SerializeField] bool isDestroyable;
     [SerializeField] Sprite brokenSprite;
+    [SerializeField] int NumberOfTile;
     GameObject TileParent;
-    
+    private bool shouldBeBroken = true;
+
     // Start is called before the first frame update
     void Start()
-    {
+    { 
         anim.SetFloat("Life", hitPoints);
+        anim.SetInteger("TileNum", NumberOfTile);
+        anim.SetBool("IsBreakable", isDestroyable);
+        if (hitPoints < 2)
+        {
+            shouldBeBroken = false;
+        }
+        anim.SetBool("ShouldBeBroken", shouldBeBroken);
         TileParent = this.transform.parent.gameObject;
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -40,6 +49,7 @@ public class TileGotHit : MonoBehaviour
                 anim.SetFloat("Life", hitPoints);
                 if (hitPoints == 1)
                 {
+
                     this.gameObject.GetComponent<SpriteRenderer>().sprite = brokenSprite;
                 }
                 if (TileParent.gameObject.transform.childCount == 1)
@@ -53,6 +63,5 @@ public class TileGotHit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Mover : MonoBehaviour
 {
@@ -32,6 +33,11 @@ public class Mover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
         Vector2 mouseVec = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mouseVec.y = playerYposition;
         if(mouseVec.x < leftWall.transform.position.x + (leftWall.transform.localScale.x*2) + this.transform.localScale.x)

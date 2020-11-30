@@ -148,7 +148,7 @@ MonoBehaviour:
   anim: {fileID: -1218946588880401436}
   isDestroyable: 1
   brokenSprite: {fileID: 21300000, guid: 72b4fe1a03b74a648a0c44ae2a001aad, type: 3}
-  TileParent: {fileID: 0}
+  NumberOfTile: 1
 --- !u!95 &-1218946588880401436
 Animator:
   serializedVersion: 3

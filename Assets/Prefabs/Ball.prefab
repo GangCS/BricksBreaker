@@ -175,8 +175,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 5667560876739242551}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18b644c57533dc045a3293bd8485aa2d, type: 3}
+  m_Script: {fileID: 11500000, guid: 5b904f9b1abbbe241892d64d6a7378c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ballYvelocity: 400
-  ballXvelocity: 100
