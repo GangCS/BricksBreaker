@@ -23,7 +23,7 @@ public class StartGame : MonoBehaviour
             {
                 rb.bodyType = RigidbodyType2D.Dynamic;
                 int x = Random.Range(0, 20);
-                rb.AddForce(new Vector2(x, 20),ForceMode2D.Impulse);
+                rb.AddForce(new Vector2(x, 12),ForceMode2D.Impulse);
                 startGame = false;
                 transform.parent = null;
                 Destroy(this);
