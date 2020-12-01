@@ -12,6 +12,7 @@ public class ExplodeScript : StateMachineBehaviour
     [SerializeField] GameObject MultipleBallsPowerUp;
     [SerializeField] GameObject ShrinkPowerUp;
     [SerializeField] GameObject SlowerBallsPowerUp;
+    private int MaxRange = 16;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     //override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     //{
@@ -26,8 +27,8 @@ public class ExplodeScript : StateMachineBehaviour
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.gameObject.GetComponent<BoxCollider2D>().enabled = false;
-        int x = Random.Range(0, 16);
-        switch (x)
+        int RandomPowerUp = Random.Range(0, MaxRange);
+        switch (RandomPowerUp)
         {
             case 1: Instantiate(biggerBall, new Vector3(animator.gameObject.transform.position.x, animator.gameObject.transform.position.y), Quaternion.identity);
                 break;

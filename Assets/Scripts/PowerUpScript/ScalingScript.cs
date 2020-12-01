@@ -19,15 +19,16 @@ public class ScalingScript : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         
-        if (collision.tag.CompareTo("Player") == 0)
+        if (collision.tag.CompareTo("Player") == 0 && !touched)
         {
-            this.gameObject.transform.localScale *= 0;
-            this.gameObject.transform.position = new Vector3(100,0,0);
+            
             Vector3 newScale = new Vector3(orginalScale.x * scalingMult, orginalScale.y, orginalScale.z);
             collision.gameObject.transform.localScale = newScale;
             theCube = collision.gameObject;
             ExapndTime = Time.time;
             touched = true;
+            this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            this.gameObject.GetComponent<CircleCollider2D>().enabled = false;
         }
         
     }

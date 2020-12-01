@@ -12,7 +12,6 @@ public class SpeedScript : MonoBehaviour
     private GameObject theBall;
     private float SpeedTime;
     private Rigidbody2D rb;
-    private bool TouchedOnce=false;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,15 +22,14 @@ public class SpeedScript : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if (collision.tag.CompareTo("Player") == 0 && !TouchedOnce)
+        if (collision.tag.CompareTo("Player") == 0 && !touched)
         {
-            this.gameObject.transform.localScale *= 0;
             rb.velocity *= speedMult;
             m.HigherSpeed(speedMult);
-            this.gameObject.transform.position = new Vector3(100, 0, 0);
             SpeedTime = Time.time;
-            touched = true;
-            TouchedOnce = true;
+            touched = true;  // On trigger could happen more then once per collision so we ensure that the power up will apply only once
+            this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            this.gameObject.GetComponent<CircleCollider2D>().enabled = false;
         }
     }
     // Update is called once per frame

@@ -6,6 +6,7 @@ public class BigBallScript : MonoBehaviour
 {
     [SerializeField] GameObject Ball;
     [SerializeField] float TimeOfPowerUp = 3f;
+    [SerializeField] float BallSizeMultiplier = 2f;
     private bool touched = false;
     private Vector3 orginalScale;
     private GameObject theBall;
@@ -19,13 +20,13 @@ public class BigBallScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag.CompareTo("Player") == 0)
+        if (collision.tag.CompareTo("Player") == 0 && !touched)
         {
-            this.gameObject.transform.localScale *= 0;
-            theBall.transform.localScale = orginalScale * 2f;
-            this.gameObject.transform.position = new Vector3(100, 0, 0);
+            theBall.transform.localScale = orginalScale * BallSizeMultiplier;
+            touched = true;  // On trigger could happen more then once per collision so we ensure that the power up will apply only once
+            this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            this.gameObject.GetComponent<CircleCollider2D>().enabled = false;
             BallTime = Time.time;
-            touched = true;
         }
     }
     // Update is called once per frame

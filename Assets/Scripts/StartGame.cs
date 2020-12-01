@@ -7,6 +7,8 @@ public class StartGame : MonoBehaviour
     // Start is called before the first frame update
     bool startGame;
     private Rigidbody2D rb;
+    [SerializeField] int RandomArcRange=20;
+    [SerializeField] int InitUpBallPower = 12;
     void Start()
     {
         startGame = true;
@@ -22,8 +24,8 @@ public class StartGame : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 rb.bodyType = RigidbodyType2D.Dynamic;
-                int x = Random.Range(0, 20);
-                rb.AddForce(new Vector2(x, 12),ForceMode2D.Impulse);
+                int RandomArc = Random.Range(-RandomArcRange, RandomArcRange);
+                rb.AddForce(new Vector2(RandomArc, InitUpBallPower),ForceMode2D.Impulse);
                 startGame = false;
                 transform.parent = null;
                 Destroy(this);

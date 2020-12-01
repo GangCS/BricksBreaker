@@ -60,12 +60,8 @@ public class Mover : MonoBehaviour
         float newDirection = (ballLoc.x - cubeLoc.x)*newDirectionSize;
 
         Vector2 direction = collision.rigidbody.velocity;
-        direction.x = newDirection+0.5f;
+        direction.x = newDirection;
         direction = direction.normalized*newDirectionPower;//Set it on permanent speed
-        if(direction.y == 0)
-        {
-            direction.y = Random.Range(-1f, 1f);
-        }
         collision.rigidbody.velocity = direction;
     }
 }

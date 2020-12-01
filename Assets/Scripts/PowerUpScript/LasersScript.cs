@@ -20,14 +20,15 @@ public class LasersScript : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if (collision.tag.CompareTo("Player") == 0)
+        if (collision.tag.CompareTo("Player") == 0 && !touched)
         {
-            this.gameObject.transform.localScale *= 0; // disapper powerUp
             spawnerA.setShotter(true);
             spawnerB.setShotter(true);
-            this.gameObject.transform.position = new Vector3(100, 0, 0);
+            this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            this.gameObject.GetComponent<CircleCollider2D>().enabled = false;
             SpeedTime = Time.time;
             touched = true;
+
         }
     }
     // Update is called once per frame

@@ -6,7 +6,7 @@ public class LaserSpawner : MonoBehaviour
 {
     [SerializeField] GameObject laser;
     bool canFire = false;
-
+    [SerializeField] int LaserUpPower = 20;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +21,7 @@ public class LaserSpawner : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 GameObject shotter = Instantiate(laser, new Vector3(transform.position.x, transform.position.y), Quaternion.identity);
-                shotter.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 20), ForceMode2D.Impulse);
+                shotter.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, LaserUpPower), ForceMode2D.Impulse);
                     
             }
         }

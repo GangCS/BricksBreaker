@@ -10,6 +10,7 @@ public class TileGotHit : MonoBehaviour
     [SerializeField] bool isDestroyable;
     [SerializeField] Sprite brokenSprite;
     [SerializeField] int NumberOfTile;
+    [SerializeField] int NoBrokenAnimationBreakPoint = 1;
     GameObject TileParent;
     private bool shouldBeBroken = true;
 
@@ -19,7 +20,7 @@ public class TileGotHit : MonoBehaviour
         anim.SetFloat("Life", hitPoints);
         anim.SetInteger("TileNum", NumberOfTile);
         anim.SetBool("IsBreakable", isDestroyable);
-        if (hitPoints < 2)
+        if (hitPoints <= NoBrokenAnimationBreakPoint)
         {
             shouldBeBroken = false;
         }

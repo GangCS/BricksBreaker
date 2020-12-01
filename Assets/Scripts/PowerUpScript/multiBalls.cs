@@ -22,7 +22,7 @@ public class multiBalls : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player" && !touched)
         {
-            this.transform.localScale *= 0;
+            this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
             ballsSpawn.instatiateBalls();
             touched = true;
         }
