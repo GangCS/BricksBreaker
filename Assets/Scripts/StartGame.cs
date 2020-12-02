@@ -7,7 +7,7 @@ public class StartGame : MonoBehaviour
     // Start is called before the first frame update
     bool startGame;
     private Rigidbody2D rb;
-    [SerializeField] int RandomArcRange=20;
+    [SerializeField] int RandomArcRange = 20;
     [SerializeField] int InitUpBallPower = 12;
     void Start()
     {
@@ -28,7 +28,21 @@ public class StartGame : MonoBehaviour
                 rb.AddForce(new Vector2(RandomArc, InitUpBallPower),ForceMode2D.Impulse);
                 startGame = false;
                 transform.parent = null;
-                Destroy(this);
+            }
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        //Debug.Log("Here");
+        if (collision.gameObject.tag.CompareTo("LeftWall") == 0 || collision.gameObject.tag.CompareTo("RightWall") == 0)
+        {
+            
+            // if the ball collided left or right wall
+            // if its y is 0 then give him boost to y
+            if (rb.velocity.y == 0)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, 0.7f);
             }
         }
     }

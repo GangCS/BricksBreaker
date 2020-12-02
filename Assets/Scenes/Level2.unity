@@ -1973,7 +1973,7 @@ GameObject:
   - component: {fileID: 503957112}
   m_Layer: 0
   m_Name: rightWall
-  m_TagString: Untagged
+  m_TagString: RightWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3911,7 +3911,7 @@ GameObject:
   - component: {fileID: 1097710957}
   m_Layer: 0
   m_Name: leftWall
-  m_TagString: Untagged
+  m_TagString: LeftWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4555,6 +4555,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laser: {fileID: 5014444100612330391, guid: a6319b6a2939034429eb0d68ea6d2e18, type: 3}
+  LaserUpPower: 20
 --- !u!1 &1418401055
 GameObject:
   m_ObjectHideFlags: 0
@@ -5455,6 +5456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laser: {fileID: 5014444100612330391, guid: a6319b6a2939034429eb0d68ea6d2e18, type: 3}
+  LaserUpPower: 20
 --- !u!1001 &1781724271
 PrefabInstance:
   m_ObjectHideFlags: 0

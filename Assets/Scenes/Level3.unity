@@ -2216,7 +2216,7 @@ GameObject:
   - component: {fileID: 378598365}
   m_Layer: 0
   m_Name: 29-Breakout-Tiles
-  m_TagString: Untagged
+  m_TagString: RightWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2872,7 +2872,7 @@ GameObject:
   - component: {fileID: 503957112}
   m_Layer: 0
   m_Name: rightWall
-  m_TagString: Untagged
+  m_TagString: RightWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2973,7 +2973,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.82827187, y: -0.060102105}
+  m_Offset: {x: 0.80702746, y: -0.060102105}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2984,7 +2984,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.6565437, y: 1.120204}
+  m_Size: {x: 2.6990325, y: 1.120204}
   m_EdgeRadius: 0
 --- !u!1 &506032411
 GameObject:
@@ -5934,7 +5934,7 @@ GameObject:
   - component: {fileID: 959582654}
   m_Layer: 0
   m_Name: 29-Breakout-Tiles
-  m_TagString: Untagged
+  m_TagString: LeftWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6504,7 +6504,7 @@ GameObject:
   - component: {fileID: 1097710957}
   m_Layer: 0
   m_Name: leftWall
-  m_TagString: Untagged
+  m_TagString: LeftWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7197,6 +7197,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b904f9b1abbbe241892d64d6a7378c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RandomArcRange: 20
+  InitUpBallPower: 12
 --- !u!1 &1401984621
 GameObject:
   m_ObjectHideFlags: 0
@@ -7322,6 +7324,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laser: {fileID: 5014444100612330391, guid: a6319b6a2939034429eb0d68ea6d2e18, type: 3}
+  LaserUpPower: 20
 --- !u!1001 &1417792133
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9088,6 +9091,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laser: {fileID: 5014444100612330391, guid: a6319b6a2939034429eb0d68ea6d2e18, type: 3}
+  LaserUpPower: 20
 --- !u!4 &1786744149 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9119052139377566223, guid: dfe9791ee94aeec4f9214684bbe32e81,
@@ -10429,20 +10433,15 @@ PrefabInstance:
       propertyPath: m_TagString
       value: ball
       objectReference: {fileID: 0}
-    - target: {fileID: 5667560876739242554, guid: 3184ee7627e4fd542b2e40c20fd9e244,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5667560876739242555, guid: 3184ee7627e4fd542b2e40c20fd9e244,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.06650435
+      value: -0.09
       objectReference: {fileID: 0}
     - target: {fileID: 5667560876739242555, guid: 3184ee7627e4fd542b2e40c20fd9e244,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.41
+      value: 1.21
       objectReference: {fileID: 0}
     - target: {fileID: 5667560876739242555, guid: 3184ee7627e4fd542b2e40c20fd9e244,
         type: 3}
@@ -10452,17 +10451,17 @@ PrefabInstance:
     - target: {fileID: 5667560876739242555, guid: 3184ee7627e4fd542b2e40c20fd9e244,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5667560876739242555, guid: 3184ee7627e4fd542b2e40c20fd9e244,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5667560876739242555, guid: 3184ee7627e4fd542b2e40c20fd9e244,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5667560876739242555, guid: 3184ee7627e4fd542b2e40c20fd9e244,
         type: 3}
@@ -10492,15 +10491,14 @@ PrefabInstance:
     - target: {fileID: 5667560876739242555, guid: 3184ee7627e4fd542b2e40c20fd9e244,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.0500526
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 5667560876739242555, guid: 3184ee7627e4fd542b2e40c20fd9e244,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.2
+      value: 0.6
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5667560876739242554, guid: 3184ee7627e4fd542b2e40c20fd9e244, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3184ee7627e4fd542b2e40c20fd9e244, type: 3}
 --- !u!1001 &6460521110472048203
 PrefabInstance:
